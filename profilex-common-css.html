@@ -1,0 +1,206 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<!-- shared styles for all views -->
+<dom-module id="profilex-common-css">
+    <template>
+    <style>
+    :root {
+    --bg-gradient: linear-gradient(to bottom, #F3F4F5 160px, white 50vh);
+    --theme-font: 'Open Sans';
+    --monospace-font: 'Source Code Pro', monospace;
+    --theme-font-color: #383F46;
+    --syntax-hue: 220;
+    --syntax-saturation: 13%;
+    --syntax-brightness: 18%;
+    --mono-1: hsl(var(--syntax-hue), 14%, 90%);
+    --mono-2: hsl(var(--syntax-hue), 9%, 59%);
+    --mono-3: hsl(var(--syntax-hue), 6%, 58%);
+    --hue-1: hsl(187, 47%, 55%);
+    --hue-2: hsl(207, 82%, 66%);
+    --hue-3: hsl(286, 60%, 67%);
+    --hue-4: hsl( 95, 38%, 62%);
+    --hue-5: hsl(355, 65%, 66%);
+    --hue-5-2: hsl( 5, 80%, 65%);
+    --hue-6: hsl( 29, 54%, 61%);
+    --hue-6-2: hsl( 39, 67%, 69%);
+    --syntax-fg: var(--mono-1);
+    --syntax-bg: hsl(var(--syntax-hue), var(--syntax-saturation), var(--syntax-brightness));
+    --syntax-selection: hsl(var(--syntax-hue), var(--syntax-saturation), 28%);
+    --syntax-corrected-selection: hsl(var(--syntax-hue), 7%, 62%);
+    --syntax-accent: hsl(var(--syntax-hue), 100%, 67%);
+    --syntax-gutter: hsl(var(--syntax-hue), 14%, 45%);
+    --syntax-guide: hsla(var(--syntax-hue), 14%, 71%, 0.85);
+    --right-background: #f5f5f5;
+    --left-background: #f3f3f3;
+    color: var(--theme-font-color);
+    /*Brand colors*/
+    --col_trimble_blue_dark: #002D5B;
+    --col_trimble_blue: #00437B;
+    --col_trimble_blue_mid: #005F9E;
+    --col_trimble_blue_light: #009AD9;
+    --col_trimble_yellow: #FFBE00;
+    --col_trimble_green: #4D6F33;
+    --col_trimble_red: #A51D25;
+    /*Grayscale*/
+    --col_white: #FFFFFF;
+    --col_gray_half: #f9f9fb;
+    --col_gray_light: #F3F3F7;
+    --col_gray_0: #EAEAEF;
+    --col_gray_1: #E2E2E7;
+    --col_gray_2: #D0D0D7;
+    --col_gray_3: #BFBFC6;
+    --col_gray_4: #AEAEB6;
+    --col_gray_5: #9D9DA6;
+    --col_gray_6: #8C8B96;
+    --col_gray_7: #7B7A86;
+    --col_gray_8: #6A6976;
+    --col_gray_9: #595868;
+    --col_gray_10: #474655;
+    --col_trimble_gray: #363545;
+    --col_gray_dark_1: #262533;
+    --col_gray_dark_2: #1B1A26;
+    --col_gray_dark_3: #0B0A12;
+    --col_black: #000000;
+    /*Blue Buttons & Notifications*/
+    --col_blue: #0D6AA8;
+    --col_blue_light: #197CB6;
+    --col_blue_dark: #07599B;
+    --col_blue_pale: #CFE1EE;
+    /*Green Buttons & Notifications*/
+    --col_green: #5E9331;
+    --col_green_light: #72A544;
+    --col_green_dark: #4A821F;
+    --col_green_pale: #DFE9D6;
+    /*Yellow Buttons*/
+    --col_yellow: #FFBE00;
+    --col_yellow_light: #FFD200;
+    --col_yellow_dark: #FFA500;
+    --col_yellow_pale: #FFF2CC;
+    /*Orange Notifications*/
+    --col_orange: #ff8b00;
+    --col_orange_light: #ffa500;
+    --col_orange_dark: #ff6e00;
+    --col_orange_pale: #FFE8CC;
+    /*Red Buttons & Notifications*/
+    --col_red: #C81922;
+    --col_red_light: #D52A33;
+    --col_red_dark: #BC0911;
+    --col_red_pale: #F4D1D3;
+    /*Markup*/
+    --col_markup: #ff00ff;
+    /*Checkbox hover*/
+    --col_blue_hover: rgba(13, 106, 168, 0.2);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: var(--col_gray_light);
+    font-family: 'Open Sans';
+}
+
+div.background {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+div.box {
+    margin: 10px;
+    width: 250px;
+}
+
+h2 {
+    font-size: 22px;
+    margin: 0 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--col_trimble_gray);
+}
+
+a:hover {
+    color: var(--col_trimble_blue);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--col_gray_1);
+    cursor: pointer;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--col_trimble_gray);
+}
+
+li a:hover {
+    color: var(--col_trimble_blue);
+}
+
+button,
+.button {
+    padding: 6px 20px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+button.button-primary {
+    background-color: var(--col_blue);
+    color: var(--col_white);
+    border: 1px solid var(--col_blue_dark);
+}
+
+select {
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    border: 1px solid var(--col_gray_1);
+}
+
+select>option {
+    padding: 5px;
+}
+
+.form-element-row {
+    margin: 10px 0;
+}
+
+.listview-group {
+    max-height: 200px;
+    overflow: auto;
+}
+
+.listview {
+    padding: 10px 0 0;
+}
+
+.listview input {
+    margin: 10px;
+}
+
+.listview .column {
+    margin-left: 35px;
+}
+    </style>
+    </template>
+</dom-module>
