@@ -15,6 +15,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <template>
     <style>
 
+
 html {
   box-sizing: border-box;
   font-size: 100%; }
@@ -93,13 +94,37 @@ textarea {
   .card{
     background: #ffffff;
     box-shadow: 1px 1px 5px 0px rgba(54,53,69,0.65);
+    margin-top: 15px;
+  }
+  
+  .card:last-child{
+    margin-bottom: 15px;
   }
   
   .card-divider {
-    padding:1rem;   
+    padding:30px 30px 15px;   
   }
   .card-divider h4{
-    font-size: 1.5625rem;
+    font-size: 20px;
+    font-weight: 600px;
+    margin:0;
+  }
+  
+  .profile-picture{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;        
+  }
+  
+  .profile-picture img{
+    width: 100%;
+    height: auto;
+        border:1px solid #ccc;
+    border-radius: 50%;
+  }
+  
+  .card-section{
+    padding: 15px 30px;
   }
   </style>
     </template>

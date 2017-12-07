@@ -577,8 +577,9 @@ select {
     float: none;
     margin-left: 0; }
 
-a.button:hover, a.button:focus {
+a.button, a.button:hover, a.button:focus {
   text-decoration: none; }
+  
 
 .close-button {
   position: absolute;
