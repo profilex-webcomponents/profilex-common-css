@@ -1,8 +1,19 @@
 {
-    "name": "profilex-common-css",
-    "version": "1.0.14",
-    "main": "index.html",
-    "repository": "https://github.com/profilex-webcomponents/profilex-common-css.git",
-    "author": "<balasureshv@gmail.com>",
-    "license": "MIT"
+  "name": "profilex-common-css",
+  "version": "1.0.14",
+  "main": "index.html",
+  "repository": "https://github.com/profilex-webcomponents/profilex-common-css.git",
+  "author": "<balasureshv@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-foreach": "^0.1.0",
+    "gulp-inject-string": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-tap": "^1.0.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "gulp-sass": "^3.1.0"
+  }
 }

@@ -1,0 +1,6 @@
+@import '../../node_modules/foundation-sites/scss/_global.scss';
+// Sass utilities
+@import '../../node_modules/foundation-sites/scss/xy-grid/_xy-grid.scss';
+@import '../../node_modules/foundation-sites/scss/forms/_forms.scss';
+@include foundation-xy-grid-classes;
+@include foundation-forms;
